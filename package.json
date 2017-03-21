@@ -1,0 +1,19 @@
+{
+  "name": "spotify-challenge",
+  "version": "1.0.0",
+  "description": "App for Spotify challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "DJ",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.1",
+    "node-restful": "^0.2.6"
+  }
+}
