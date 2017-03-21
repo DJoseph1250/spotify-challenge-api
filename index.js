@@ -17,12 +17,9 @@ var peopleApi = restful.model("person", Person.schema)
     .methods(["get", "post", "put", "delete"])
     .register(app, "/api/people");
 mongoose.connect(connectionString);
-// ===============
-// SERVER
-// ===============
+// Server stuff
 var port = app.get("port");
 var server = app.listen(port, function () {
-    // note: Only for debugging purposes to see that your variables are set correctly...
     console.log("connectionString is: " + connectionString);
     console.log("port is: " + port);
     console.log("Server started listening...");

@@ -1,8 +1,8 @@
+//Dependencies
 import * as express from "express";  
 import * as bodyParser from "body-parser";  
 import * as Person from "./models/people";  
 import * as mongoose from "mongoose";
-
 var restful = require('node-restful'); 
 
 let appPort: number =  (process.env.PORT || 8000);  
@@ -22,13 +22,9 @@ var peopleApi = restful.model("person", Person.schema)
 
 mongoose.connect(connectionString); 
 
-// ===============
-// SERVER
-// ===============
+// Server
 let port:number = app.get("port");  
 var server = app.listen(port, function(){
-
-    // note: Only for debugging purposes to see that your variables are set correctly...
     console.log("connectionString is: " + connectionString);
     console.log("port is: " + port);
     console.log("Server started listening...");
