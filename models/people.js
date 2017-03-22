@@ -20,21 +20,13 @@ var person = new Person();
 
 
 person.save(function (err) {
-
     // person._id === 100 -> true
-
     person.nextCount(function(err, count) {
-
         // count === 101 -> true
-
         person.resetCount(function(err, nextCount) {
-
             // nextCount === 100 -> true
-
         });
-
     });
-
 });
 
 module.exports = Person;
