@@ -10,7 +10,12 @@ var peopleSchema = new mongoose.Schema({
     favoriteCity: String
 });
 
-peopleSchema.plugin(autoIncrement.plugin, "Person");
+peopleSchema.plugin(autoIncrement.plugin, {
+    model: 'Person',
+    field: '_id',
+    startAt: 1,
+    incrementBy: 1
+});
 var Person = connection.model("Person", peopleSchema);
 module.exports = Person;
 //# sourceMappingURL=people.js.map
