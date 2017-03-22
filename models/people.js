@@ -2,6 +2,7 @@
 var mongoose = require("mongoose");
 ;
 var peopleSchema = new mongoose.Schema({
+	_id: String,
     name: String,
     favoriteCity: String
 });
