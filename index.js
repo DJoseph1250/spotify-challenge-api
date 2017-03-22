@@ -4,6 +4,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var Person = require("./models/people");
 var mongoose = require("mongoose");
+var mongodb = require("mongodb");
 var restful = require('node-restful');
 var appPort = (process.env.PORT || 8000);
 var connectionString = process.env.MONGODB_URI;
