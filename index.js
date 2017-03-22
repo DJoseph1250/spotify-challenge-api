@@ -62,8 +62,8 @@ app.get('/api/people', function (req, res) {
 app.post('/api/people', function (req, res) {
     var newPerson = req.body;
 
-    if (!req.body.name) {
-        handleError(res, "Invalid user input", "Must provide a name.", 400);
+    if (!req.body.name || !req.body.favoriteCity) {
+        handleError(res, "Invalid user input", "Must provide a name and city.", 400);
     }
 
     db.collection(PEOPLE_COLLECTION).insertOne(newPerson, function(err, doc) {
