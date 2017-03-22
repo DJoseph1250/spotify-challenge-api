@@ -12,7 +12,6 @@ var peopleSchema = new mongoose.Schema({
 
 peopleSchema.plugin(autoIncrement.plugin, {
     model: 'Person',
-    field: '_id',
     startAt: 1,
     incrementBy: 1
 });
