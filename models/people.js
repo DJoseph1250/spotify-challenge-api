@@ -16,5 +16,26 @@ peopleSchema.plugin(autoIncrement.plugin, {
     incrementBy: 1
 });
 var Person = connection.model("Person", peopleSchema);
+var person = new Person();
+
+
+person.save(function (err) {
+
+    // person._id === 100 -> true
+
+    person.nextCount(function(err, count) {
+
+        // count === 101 -> true
+
+        person.resetCount(function(err, nextCount) {
+
+            // nextCount === 100 -> true
+
+        });
+
+    });
+
+});
+
 module.exports = Person;
 //# sourceMappingURL=people.js.map
