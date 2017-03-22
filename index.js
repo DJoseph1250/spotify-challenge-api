@@ -28,7 +28,6 @@ mongoose.connect(connectionString);
 var port = app.get("port");
 var server = app.listen(port, function () {
     console.log("connectionString is: " + connectionString);
-    console.log("port is: " + port);
-    console.log("Server started listening...");
+    console.log("Server listening on port: " + port);
 });
 //# sourceMappingURL=index.js.map
